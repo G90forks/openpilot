@@ -1,3 +1,4 @@
+
 # ruff: noqa: E501
 import re
 from dataclasses import dataclass
@@ -1354,12 +1355,19 @@ FW_VERSIONS = {
   },
   CAR.GENESIS_G90: {
     (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x87VCKLK18719232DL2wfVf\x88vgvvUET\xaa\x98\x8a\x99\xa8eVe\x86eVUx\x9a\x8f\xff\x80\xdd\xf1\x81E14\x00\x00\x00\x00\x00\x00\x00\xf1\x00bcshcm49  E14\x00\x00\x00\x00\x00\x00\x00SHI0T33NB2\xe1\x8bs\xc4',
       b'\xf1\x87VDGMD15352242DD3w\x87gxwvgv\x87wvw\x88wXwffVfffUfw\x88o\xff\x06J\xf1\x81E14\x00\x00\x00\x00\x00\x00\x00\xf1\x00bcshcm49  E14\x00\x00\x00\x00\x00\x00\x00SHI0G50NB1tc5\xb7',
       b'\xf1\x87VDGMD15866192DD3x\x88x\x89wuFvvfUf\x88vWwgwwwvfVgx\x87o\xff\xbc^\xf1\x81E14\x00\x00\x00\x00\x00\x00\x00\xf1\x00bcshcm49  E14\x00\x00\x00\x00\x00\x00\x00SHI0G50NB1tc5\xb7',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [b'\xf1\x00HI__ SCC F-CUP      1.00 1.01 96400-D2100         '],
-    (Ecu.fwdCamera, 0x7c4, None): [b'\xf1\x00HI  LKAS AT USA LHD 1.00 1.00 95895-D2020 160302'],
-    (Ecu.engine, 0x7e0, None): [b'\xf1\x810000000000\x00'],
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00HI  LKAS AT USA LHD 1.00 1.00 95895-D2020 160302',
+      b'\xf1\x00HI  LKAS AT USA LHD 1.00 1.01 95895-D2030 170811',
+    ], 
+    (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x810000000000\x00',
+      b'\xf1\x81640F0051\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
   },
   CAR.KONA: {
     (Ecu.fwdRadar, 0x7d0, None): [b'\xf1\x00OS__ SCC F-CUP      1.00 1.00 95655-J9200         ', ],
